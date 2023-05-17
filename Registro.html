@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro Maximo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+     <link rel="stylesheet" href="registro.css">
+    <style>
+      .Alinear{
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+     <style>
+       .contenedor{
+        background-color: #2D4263;
+        height: 65vh;
+
+        justify-content: center;
+        align-items: center;
+        
+      }
+    </style>  
+    <style>
+      .posicion{
+        width: 200px;
+        height: 200px;
+        position: center;
+        left: 0;
+        right: 0;
+      }
+    </style> 
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+    </style>
+<head>
+  <body>
+      <div class="login-box container-fluid contenedor"> 
+        <head>
+        
+          <style>
+            .error {
+              color: red;
+            }
+          </style>
+        </head>
+          <a class="navbar-brand posicion " href="index.html">
+            <img src="https://1000marcas.net/wp-content/uploads/2022/05/Akatsuki-Logo.png" height="100px" alt="Logo cars">
+          </a>
+          <h1>Registro de Usuario</h1>
+          
+          <form id="registration-form" class="flex-start" onsubmit="return validateForm()">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <span id="username-error" class="error"></span>
+            <br>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="email-error" class="error"></span>
+            <br>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="password-error" class="error"></span>
+            <br>
+            
+            <label for="confirm-password">Confirmar contraseña:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <span id="confirm-password-error" class="error"></span>
+            <br>
+            
+            <input type="submit" value="Registrarse">
+
+          </form>
+        </div> 
+
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Registro Exitoso</h2>
+                <p>Tu registro ha sido completado correctamente.</p>
+              </div>
+            </div>
+
+        
+          <script>
+            function validateForm() {
+              var username = document.getElementById("username").value;
+              var email = document.getElementById("email").value;
+              var password = document.getElementById("password").value;
+              var confirmPassword = document.getElementById("confirm-password").value;
+              
+              var isValid = true;
+              
+              // Validación del nombre de usuario
+              var usernameError = document.getElementById("username-error");
+              if (username.length < 5) {
+                usernameError.textContent = "El nombre de usuario debe tener al menos 5 caracteres";
+                isValid = false;
+              } else {
+                usernameError.textContent = "";
+              }
+              
+              // Validación del correo electrónico
+              var emailError = document.getElementById("email-error");
+              if (!email.includes("@")) {
+                emailError.textContent = "Ingrese un correo electrónico válido";
+                isValid = false;
+              } else {
+                emailError.textContent = "";
+              }
+              
+              // Validación de la contraseña
+              var passwordError = document.getElementById("password-error");
+              if (password.length < 8) {
+                passwordError.textContent = "La contraseña debe tener al menos 8 caracteres";
+                isValid = false;
+              } else {
+                passwordError.textContent = "";
+              }
+              
+              // Validación de la confirmación de contraseña
+              var confirmPasswordError = document.getElementById("confirm-password-error");
+              if (confirmPassword !== password) {
+                confirmPasswordError.textContent = "Las contraseñas no coinciden";
+                isValid = false;
+              } else {
+                confirmPasswordError.textContent = "";
+              }
+              return isValid;
+            }
+            // Mostrar el modal
+                var modal = document.getElementById('modal');
+              modal.style.display = 'block';
+      
+              // Cerrar el modal al hacer clic en la 'x'
+              var closeBtn = document.getElementsByClassName('close')[0];
+              closeBtn.onclick = function() {
+                modal.style.display = 'none';
+              }
+        
+          </script>
+        </body>
+        </html>
+        
+     
