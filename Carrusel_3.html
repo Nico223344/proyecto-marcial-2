@@ -1,133 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registro Maximo</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patada en la guata</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-     <link rel="stylesheet" href="registro.css">
+
     <style>
-      .Alinear{
-        display: flex;
-        justify-content: center;
+        .contenedor{
+          background-color: red;
+          height: 500px;
+          margin: 5%;
+          width: 1500px;
+          position: relative;
+          left: 120px;
+
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
+      <style>
+          #contenedor_lleno{
+            height: 500px;
+            margin: 8%;
+            width: 1500px;
+  
+  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+    <style>
+        body{
+            background: url(faroles.avif);
+            
+        }
+    </style>
+      <style>
+        .contenedor_menu{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
+      </style>
+          <style>
+            .posicion{
+              width: 200px;
+              height: 200px;
+              position: relative;
+              left: 60px;
+              right: 0;
+            }
+       </style> 
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 0, 0);
+        background-size: cover;
+        font-family:sans-serif;
+        height: 100vh;
+}
+    </style>
+    <style>
+      .color {
+        background-color: rgb(177, 43, 43);
       }
     </style>
-     <style>
-       .contenedor{
-        background-color: black;
-        height: 50vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-      }
-    </style>  
     <style>
-      .posicion{
-        width: 200px;
-        height: 200px;
-        position: relative;
-        left: 60px;
-        right: 0;
-      }
-    </style> 
-<head>
-  <body>
-    <div class="login-box opacity-50 contenedor">
+        .imagen2 {
+          width: 280px;
+          height: 280px;
+          object-fit: cover;
+          border-radius: 20px 20px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+  
+    <nav class=" navbar-expand-lg bg-body-tertiary body">
+        <nav class=" bg-body-tertiary">
+          <div class="contenedor_menu color">
+            <a class="navbar-brand" href="index.html">
+              <img src="https://1000marcas.net/wp-content/uploads/2022/05/Akatsuki-Logo.png" height="50">
+            </a>
+          </div>
+        </nav>
+        <div class="contenedor_menu ">
+          <a class="navbar-brand" href="index.html">Richard Tejos</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    <nav class="contenedor color">
+      <div class="container col-3 ">
+        <div class="card" style="width: 18rem;">
+          <img class="imagen2" src="img/richar 2.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sobre Richard</h5>
+            Richard Tejos es un joven artista marcial de 23 años especializado en varias doctrinas y que recientemente se ha incorporado a la carrera Ingenieria Informatica. </p>
+          </div>       
+        </div>
+      </div>  
+      <div class="container col-3">
+        <div class="card" style="width: 18rem;">
+          <img class="imagen2" src="img/richar ataque.gif" class="card-img-right" >
+          <div class="card-body">
+            <h5 class="card-title">Conocimientos</h5>
+           <br> Conocimiento de artes marciales y manejo de boostrap 5 y java script
+          </div>       
+        </div>
+      </div>
+      <div class="container col-3">  
+        <div class="card" style="width: 18rem;">
+          <img class="imagen2" src="img/ricahr progreman.gif" class="card-img-right" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ofrecemos</h5>
+            Es la figura creativa del proyecto y brinda constantes ideas, metodos y funciones para poder mejorar las funciones de su pagina, ademas de las tecnicas </p>
+          </div>       
+        </div>
+      </div>  
+   </nav>
+   
 
-    </div>
-      <div class="login-box "> 
-        <a class="navbar-brand posicion" href="index.html">
-          <img src="https://1000marcas.net/wp-content/uploads/2022/05/Akatsuki-Logo.png" height="100px" alt="Logo cars">
-        </a>
-        <h1>REGISTRO</h1>
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Registro de Usuario</title>
-          <style>
-            .error {
-              color: red;
-            }
-          </style>
-        </head>
-        <body>
-          <h1>Registro de Usuario</h1>
-          
-          <form id="registration-form" onsubmit="return validateForm()">
-            <label for="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" required>
-            <span id="username-error" class="error"></span>
-            <br>
-            
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <span id="email-error" class="error"></span>
-            <br>
-            
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            <span id="password-error" class="error"></span>
-            <br>
-            
-            <label for="confirm-password">Confirmar contraseña:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            <span id="confirm-password-error" class="error"></span>
-            <br>
-            
-            <input type="submit" value="Registrarse">
-          </form>
-          
-          <script>
-            function validateForm() {
-              var username = document.getElementById("username").value;
-              var email = document.getElementById("email").value;
-              var password = document.getElementById("password").value;
-              var confirmPassword = document.getElementById("confirm-password").value;
-              
-              var isValid = true;
-              
-              // Validación del nombre de usuario
-              var usernameError = document.getElementById("username-error");
-              if (username.length < 5) {
-                usernameError.textContent = "El nombre de usuario debe tener al menos 5 caracteres";
-                isValid = false;
-              } else {
-                usernameError.textContent = "";
-              }
-              
-              // Validación del correo electrónico
-              var emailError = document.getElementById("email-error");
-              if (!email.includes("@")) {
-                emailError.textContent = "Ingrese un correo electrónico válido";
-                isValid = false;
-              } else {
-                emailError.textContent = "";
-              }
-              
-              // Validación de la contraseña
-              var passwordError = document.getElementById("password-error");
-              if (password.length < 8) {
-                passwordError.textContent = "La contraseña debe tener al menos 8 caracteres";
-                isValid = false;
-              } else {
-                passwordError.textContent = "";
-              }
-              
-              // Validación de la confirmación de contraseña
-              var confirmPasswordError = document.getElementById("confirm-password-error");
-              if (confirmPassword !== password) {
-                confirmPasswordError.textContent = "Las contraseñas no coinciden";
-                isValid = false;
-              } else {
-                confirmPasswordError.textContent = "";
-              }
-              
-              return isValid;
-            }
-          </script>
-        </body>
-        </html>
-        
-     
+
+</body>
+</html>
